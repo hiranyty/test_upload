@@ -1,0 +1,73 @@
+
+
+
+List installed jdks in your machine.
+
+ls -l /Library/Java/JavaVirtualMachines
+
+ MAVEN NOTES
+
+ mvn exec:java -Dexec.mainClass=com.example.fxcalculator.FXCalculatorApplication
+
+ <properties><exec.mainClass>ToyRobotCommandRunner</exec.mainClass></properties>
+
+ mvn package -Dmaven.test.skip=true
+
+
+ToyRobotCommandRunner is the application entry point which accepts the user input from command line.
+Project can be compiled using mvn compile
+Tests can be run using the command mvn test
+Application can be packaged to jar using mvn package
+To run the commands: mvn exec:java (Main class has been set in pom.xml. There is no need to pass it again)
+AMBAUS00277:Test_upload 741213$ ls -al
+total 56
+drwxr-xr-x   5 741213  1240132652    160 15 Nov 12:01 .
+drwxr-xr-x  10 741213  1240132652    320 15 Nov 11:51 ..
+drwxr-xr-x  15 741213  1240132652    480 15 Nov 12:08 .git
+-rw-r--r--@  1 741213  1240132652   6332  9 Nov 16:53 cloudgurunotes
+-rw-r--r--   1 741213  1240132652  18223 14 Nov 17:19 fx_calculator_Hiran_Fernando.zip
+AMBAUS00277:Test_upload 741213$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+AMBAUS00277:Test_upload 741213$ git init
+Reinitialized existing Git repository in /Users/741213/workspace_eclipse/Test_upload/.git/
+AMBAUS00277:Test_upload 741213$ git add .
+AMBAUS00277:Test_upload 741213$ git commit -m "initial commit"
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+AMBAUS00277:Test_upload 741213$ git branch --unset-upstream
+AMBAUS00277:Test_upload 741213$ git remote add origin https://github.com/hiranyty/test_upload.git
+fatal: remote origin already exists.
+AMBAUS00277:Test_upload 741213$ git status
+On branch master
+nothing to commit, working tree clean
+AMBAUS00277:Test_upload 741213$ git push -u origin master
+Username for 'https://github.com': hiranyty     
+Password for 'https://hiranyty@github.com': 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 13.90 KiB | 6.95 MiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/hiranyty/test_upload/pull/new/master
+remote: 
+To https://github.com/hiranyty/test_upload.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+AMBAUS00277:Test_upload 741213$ 
+
+////
+
+
+
+
+
