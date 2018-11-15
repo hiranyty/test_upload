@@ -1,0 +1,202 @@
+AWS Lambda is a compute service where you can upload your code and create  a lambda function. AWS lambda takes care of provisioning and managing the servers that use to run the code. You don't have to worry about the operating systems, patching, scaling etc. You can use Lambda in the following ways.
+
+As event event driven compute service where AWS Lambda runs your code in response to events. These events could be change to data in am Amazon s3 buckets or Amazon Dynamodb table.
+
+As a compute service to run your code in response to HTTP requests using Amazon API Gateway or API calls made using AWS sdks. This is what they doing in Cloud Guru.
+
+AWS Lambda supported by following languages.
+
+Node.
+js
+Java
+Python
+C##
+Go
+
+Lambda priced - 
+
+First 1 million request are free. $ 0,20 per 1 million requests.
+
+Duration is calculated from the time your code begins executing until it returns or otherwise terminates or rounded up to the nearest 100ms. The price depends on the amount of memory you allocate to your function.
+
+Lambada cool
+
+No servers/ Continuous scaling.
+
+EXAM TIPS
+Lambda scale out (not up) automatically.
+Lambda functions are independent, 1 event = 1 function
+Lambda is serverless
+Know what services are serverless
+*** API GATEWAY, S3, DYNAMODB
+
+Lambda functions can trigger other lambda functions, 1 event can = x functions trigger other functions.
+
+Architectures can get extremely complicated , AWS X ray allows you to debug what is happening.
+
+Lambda can do things globally , you can use it to back up s3 buckets to other buckets.
+
+You should know your triggers.
+
+Lambda functions - https://wuv3py8cid.execute-api.us-east-1.amazonaws.com/prod/MyServerlessWebsite
+
+
+
+Types of APIS
+
+
+REST APIS
+SOAP UI
+
+API Gateway is fully managed service that makes it easy for developers to publish maintain, monitor and secure APIS at any scale.
+
+AWS management provides functionalities for API developments.
+
+Users -> API Gateway -> Lambda
+                     -> EC2
+                     -> DyanmoDB
+
+######## Services
+
+Expose https endpoints to define a Restful API
+
+Serverlessly connect to services like Lambda & DyanmoDB
+Send each API endpoint to different target.
+Run efficiently with low cost
+Scale effortlessly
+Track and control usage by API key.
+Throttle requests to prevent attacks.
+Connect to CloudWatch to log all requests for monitoring.
+
+
+Configure API Gateway
+Define an API (Container) 
+Define resources and nested resources(URL paths)
+For each resource - select supported HTTP methods.
+Set Security
+Choose target(such as EC2, Lambda, DynamodDB)
+Set request and response transformations.
+
+Deploy API to stage @@@@@@
+Uses API Gateway domain by default
+
+Can use custom domain.
+
+Supports AWS Certificate Manager : free SSL/ TLS certs.
+
+Response Time - response time is the am out of time a system takes to react to a request once not has received.
+
+API latency - In simplest terms this is remote response time.When you invoke a web service or access a web page. A part from the processing time that is needed on the server to process your request.there is a delay involved for you request to reach to server. This is a issues needs to be consider in remote data which is hosting your service or page.
+
+API Caching in Amazon API Gateway to cache your endpoints response.
+# You can reduce the number of calls made to your endpoint and also improve the latency of the requests to your API.
+When you enable caching for a stage, API gateway caches responses from your endpoint from your endpoint for specified time to live (TTL) period, in seconds. API gateway then responds to the request by looking up the endpoint response from the cache instead of making a request to your endpoint.
+
+Same Origin Policy is an important concept in the web application security model. Under the policy, a web browser permits scripts contained in a first web page to access data in a second web page, but only if both web pages have the same origin.
+
+** This is done to prevent Cross Site Scripting (XSS) attacks
+
+Enforced by web browsers and ignored by tolls like postman and curl.
+
+Cross Origin Resource Sharing (CORS) is one way the server at the other end (not the client code in the browser) can relax the same origin policy.
+
+Cross- origin resource sharing (CORS) is a mechanism that allows restricted resource (fonts) on a web page to be requested from another domain outside the domain from which the first resource was served.
+
+@@@@ error  = "Origin policy cannot be read at the remote resource?" You need to enable CORS on API Gateway.
+
+
+
+/////You should know your triggers.
+
+Lambda triggers
+
+API Gateway
+AWS IOT
+Alexa Skills Kit
+Alexa Smart Home
+CloudFront
+CloudWatch Events
+CloudWatch Logs
+CodeCommit
+Cognito Sync Trigger
+DynamoDB
+Kinesis
+S3
+SNS - Processing large stream data.
+
+Lambda - Policy Templates
+AWS CloudFormation stack read only permission
+AMI read only permissions
+Amazon S3 object-read-only permissions
+Elasticsearch permissions
+Amazon SES bounce permissions
+Test harness permissions
+Simple microservice permissions
+VPN Connection Monitor permissions
+Amazon SQS poller permissions
+AWS IOT Button permissions
+Amazon Rekognition read-only permissions
+Amazon Rekognition write-only permissions
+AWS Config Rules permissions
+AWS Batch access permissions
+Amazon SNS publish policy
+Basic Lambda@Edge permissions (for cloudFront trigger)
+AWS KMS decryption permissions
+
+////////////
+API: api-gateway/wuv3py8cid/*/*/MyServerlessWebsite
+API endpoint: https://wuv3py8cid.execute-api.us-east-1.amazonaws.com/prod/MyServerlessWebsite
+API name: MyServerlessWebsiteHarry
+Authorization: NONE
+Enable metrics and error logging: No
+Method: ANY
+Resource path: /MyServerlessWebsite
+Security: NONE
+Stage: prod
+///////////
+
+Lambda function region -  North Virgina
+
+Create a method in Lambda function 
+
+ARN - Amazon Resource Name
+
+API gateway information
+
+Lambda function
+
+https://wuv3py8cid.execute-api.us-east-1.amazonaws.com/prod/MyServerlessWebsite
+
+
+
+Types of APIS
+
+
+REST APIS
+SOAP UI
+
+API Gateway is fully managed service that makes it easy for developers to publish maintain, monitor and secure APIS at any scale.
+
+AWS management provides functionalities for API developments.
+
+Users -> API Gateway -> Lambda
+                     -> EC2
+                     -> DyanmoDB
+
+
+
+Versioning
+
+When you use versioning in AWS 
+
+
+
+
+
+
+
+
+
+
+
+
